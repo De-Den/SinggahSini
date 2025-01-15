@@ -1,0 +1,371 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Penyewaan Kos-Kosan Perempuan</title>  
+    <style>  
+        /* CSS untuk tampilan yang lebih menarik */  
+        body {  
+            font-family: 'Arial', sans-serif;  
+            margin: 0;  
+            padding: 0;  
+            line-height: 1.6;  
+            background-color: #f9f9f9;  
+            color: #333;  
+        }  
+  
+        header {  
+            background: #4CAF50;  
+            color: white;  
+            padding: 20px 0;  
+            text-align: center;  
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+        }  
+  
+        nav ul {  
+            list-style: none;  
+            padding: 0;  
+        }  
+  
+        nav ul li {  
+            display: inline;  
+            margin: 0 15px;  
+        }  
+  
+        nav ul li a {  
+            color: white;  
+            text-decoration: none;  
+            font-weight: bold;  
+        }  
+  
+        nav ul li a:hover {  
+            text-decoration: underline;  
+        }  
+  
+        section {  
+            padding: 20px;  
+            margin: 20px;  
+            background: white;  
+            border-radius: 8px;  
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+        }  
+  
+        h2 {  
+            color: #4CAF50;  
+        }  
+  
+        .listing {  
+            border: 1px solid #ddd;  
+            border-radius: 8px;  
+            padding: 10px;  
+            margin-bottom: 20px;  
+            transition: transform 0.2s;  
+        }  
+  
+        .listing:hover {  
+            transform: scale(1.02);  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+        }  
+  
+        .listing img {  
+            border-radius: 8px;  
+            width: 100%;  
+            height: auto;  
+        }  
+  
+        .whatsapp-button {  
+            display: inline-block;  
+            margin-top: 10px;  
+            padding: 10px 15px;  
+            background: #25D366; /* Warna WhatsApp */  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            text-decoration: none;  
+            font-weight: bold;  
+            transition: background 0.3s;  
+        }  
+  
+        .whatsapp-button:hover {  
+            background: #128C7E; /* Warna WhatsApp saat hover */  
+        }  
+  
+        footer {  
+            background: #333;  
+            color: #fff;  
+            text-align: center;  
+            padding: 20px 0;  
+            position: relative;  
+            bottom: 0;  
+            width: 100%;  
+        }  
+  
+        footer ul {  
+            list-style: none;  
+            padding: 0;  
+        }  
+  
+        footer ul li {  
+            display: inline;  
+            margin: 0 10px;  
+        }  
+  
+        footer ul li a {  
+            color: #4CAF50;  
+            text-decoration: none;  
+        }  
+  
+        footer ul li a:hover {  
+            text-decoration: underline;  
+        }  
+  
+        #backToTop {  
+            display: none;  
+            position: fixed;  
+            bottom: 20px;  
+            right: 30px;  
+            padding: 10px;  
+            background: #4CAF50;  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  
+        }  
+  
+        #search {  
+            width: 100%;  
+            padding: 10px;  
+            margin-bottom: 20px;  
+            border: 1px solid #ddd;  
+            border-radius: 5px;  
+        }  
+  
+        form {  
+            display: flex;  
+            flex-direction: column;  
+        }  
+  
+        form label {  
+            margin: 10px 0 5px;  
+        }  
+  
+        form input, form textarea {  
+            padding: 10px;  
+            border: 1px solid #ddd;  
+            border-radius: 5px;  
+            margin-bottom: 10px;  
+        }  
+  
+        form button {  
+            padding: 10px;  
+            background: #4CAF50;  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+            transition: background 0.3s;  
+        }  
+  
+        form button:hover {  
+            background: #45a049;  
+        }  
+  
+        #newsletter {  
+            margin: 20px 0;  
+            text-align: center;  
+        }  
+  
+        #newsletter input {  
+            padding: 10px;  
+            width: 200px;  
+            border: 1px solid #ddd;  
+            border-radius: 5px;  
+        }  
+  
+        #newsletter button {  
+            padding: 10px;  
+            background: #4CAF50;  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+            transition: background 0.3s;  
+        }  
+  
+        #newsletter button:hover {  
+            background: #45a049;  
+        }  
+  
+        .gallery {  
+            display: flex;  
+            flex-wrap: wrap;  
+            justify-content: space-between;  
+        }  
+  
+        .gallery img {  
+            width: 30%;  
+            margin: 5px;  
+            border-radius: 8px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <header>  
+        <h1>Penyewaan Kos-Kosan Perempuan</h1>  
+        <nav>  
+            <ul>  
+                <li><a href="#home">Home</a></li>  
+                <li><a href="#listings">Listings</a></li>  
+                <li><a href="#contact">Contact</a></li>  
+                <li><a href="#testimonials">Testimoni</a></li>  
+                <li><a href="#gallery">Galeri</a></li>  
+                <li><a href="#newsletter">Newsletter</a></li>  
+            </ul>  
+        </nav>  
+    </header>  
+  
+    <section id="home">  
+        <h2>Selamat Datang di Kos-Kosan Kami</h2>  
+        <p>Temukan kos-kosan terbaik untuk perempuan dengan fasilitas lengkap dan harga terjangkau.</p>  
+    </section>  
+  
+    <section id="listings">  
+        <h2>Daftar Kos-Kosan</h2>  
+        <input type="text" id="search" placeholder="Cari kos-kosan...">  
+        <div class="listing">  
+            <img src="kos1.jpg" alt="Kos 1">  
+            <h3>Kos A</h3>  
+            <p>Lokasi: Jakarta</p>  
+            <p>Harga: Rp 1.500.000/bulan</p>  
+            <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20Kos%20A" class="whatsapp-button" target="_blank">Tanya di WhatsApp</a>  
+        </div>  
+        <div class="listing">  
+            <img src="kos2.jpg" alt="Kos 2">  
+            <h3>Kos B</h3>  
+            <p>Lokasi: Bandung</p>  
+            <p>Harga: Rp 1.200.000/bulan</p>  
+            <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20Kos%20B" class="whatsapp-button" target="_blank">Tanya di WhatsApp</a>  
+        </div>  
+        <!-- Tambahkan lebih banyak listing sesuai kebutuhan -->  
+    </section>  
+  
+    <section id="testimonials">  
+        <h2>Testimoni Penyewa</h2>  
+        <div class="testimonial">  
+            <p>"Kos ini sangat nyaman dan aman. Fasilitasnya lengkap!" - <strong>Sarah</strong></p>  
+        </div>  
+        <div class="testimonial">  
+            <p>"Saya sangat puas dengan pelayanan dan lokasi kos ini." - <strong>Linda</strong></p>  
+        </div>  
+        <!-- Tambahkan lebih banyak testimoni sesuai kebutuhan -->  
+    </section>  
+  
+    <section id="gallery">  
+        <h2>Galeri Kos-Kosan</h2>  
+        <div class="gallery">  
+            <img src="kos1.jpg" alt="Kos 1">  
+            <img src="kos2.jpg" alt="Kos 2">  
+            <img src="kos3.jpg" alt="Kos 3">  
+            <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->  
+        </div>  
+    </section>  
+  
+    <section id="contact">  
+        <h2>Hubungi Kami</h2>  
+        <form>  
+            <label for="name">Nama:</label>  
+            <input type="text" id="name" name="name" required>  
+            <label for="email">Email:</label>  
+            <input type="email" id="email" name="email" required>  
+            <label for="message">Pesan:</label>  
+            <textarea id="message" name="message" required></textarea>  
+            <button type="submit">Kirim</button>  
+        </form>  
+    </section>  
+  
+    <section id="newsletter">  
+        <h2>Daftar untuk Newsletter</h2>  
+        <form id="newsletterForm">  
+            <input type="email" id="newsletterEmail" placeholder="Masukkan email Anda" required>  
+            <button type="submit">Daftar</button>  
+        </form>  
+    </section>  
+  
+    <footer>  
+        <p>&copy; 2025 Penyewaan Kos-Kosan Perempuan</p>  
+        <p>Temukan lebih banyak kos-kosan kami di aplikasi berikut:</p>  
+        <ul>  
+            <li><a href="https://www.mamikos.com" target="_blank">Mamikos</a></li>  
+            <li><a href="https://www.roomme.id" target="_blank">RoomMe</a></li>  
+            <li><a href="https://www.kostkost.com" target="_blank">KostKost</a></li>  
+        </ul>  
+        <p>Ikuti kami di:</p>  
+        <ul>  
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>  
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>  
+            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>  
+        </ul>  
+    </footer>  
+  
+    <button id="backToTop">Kembali ke Atas</button>  
+  
+    <script>  
+        // JavaScript untuk validasi formulir dan fitur lainnya  
+        document.addEventListener("DOMContentLoaded", function() {  
+            const form = document.querySelector("form");  
+            const searchInput = document.getElementById("search");  
+            const listings = document.querySelectorAll(".listing");  
+            const backToTopButton = document.getElementById("backToTop");  
+  
+            form.addEventListener("submit", function(event) {  
+                const name = document.getElementById("name").value;  
+                const email = document.getElementById("email").value;  
+                const message = document.getElementById("message").value;  
+  
+                if (name === "" || email === "" || message === "") {  
+                    alert("Semua field harus diisi!");  
+                    event.preventDefault(); // Mencegah pengiriman formulir  
+                } else {  
+                    alert("Pesan Anda telah dikirim!");  
+                    form.reset(); // Reset formulir setelah pengiriman  
+                }  
+            });  
+  
+            searchInput.addEventListener("keyup", function() {  
+                const filter = searchInput.value.toLowerCase();  
+                listings.forEach(function(listing) {  
+                    const title = listing.querySelector("h3").textContent.toLowerCase();  
+                    if (title.includes(filter)) {  
+                        listing.style.display = ""; // Tampilkan  
+                    } else {  
+                        listing.style.display = "none"; // Sembunyikan  
+                    }  
+                });  
+            });  
+  
+            window.onscroll = function() {  
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {  
+                    backToTopButton.style.display = "block";  
+                } else {  
+                    backToTopButton.style.display = "none";  
+                }  
+            };  
+  
+            backToTopButton.addEventListener("click", function() {  
+                window.scrollTo({top: 0, behavior: 'smooth'});  
+            });  
+  
+            // Newsletter form submission  
+            const newsletterForm = document.getElementById("newsletterForm");  
+            newsletterForm.addEventListener("submit", function(event) {  
+                event.preventDefault(); // Mencegah pengiriman formulir  
+                const newsletterEmail = document.getElementById("newsletterEmail").value;  
+                alert("Terima kasih telah mendaftar untuk newsletter!");  
+                newsletterForm.reset(); // Reset formulir setelah pengiriman  
+            });  
+        });  
+    </script>  
+</body>  
+</html>  
